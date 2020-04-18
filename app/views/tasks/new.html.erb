@@ -1,0 +1,11 @@
+<h2 class="ml-3 mt-3">Create a new task</h2>
+<form action="/tasks" method="post">
+  <%= hidden_field_tag :authenticity_token, form_authenticity_token -%>
+  <span class="ml-3">Title</span>
+  <div style="max-width: 250px" class="ml-3 mt-2">
+    <input class="form-control" type="text" name="task[title]"> <br>
+    <span>Description</span>
+    <textarea class="form-control mt-2" id="exampleFormControlTextarea1" rows="2" name="task[details]"></textarea>
+    <input type="submit" class="btn btn-success mt-3">
+  </div>
+</form>

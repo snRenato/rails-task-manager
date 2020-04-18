@@ -1,0 +1,13 @@
+<div class="container">
+<h1>Tasks List</h1>
+<% @tasks.each do |task| %>
+  <input type="checkbox" <%= task.completed ? 'checked' : ''%>> <%= link_to "#{task.title}", task_path(task) %>
+  <%= link_to "Delete", delete_path(task), method: :delete, data: { confirm: "Are you sure?" } %> <br>
+<%end%>
+
+
+
+<%= link_to new_task_path do %>
+  <button type="button" class="btn btn-primary">Create new Task</button>
+<%end%>
+</div>
